@@ -41,9 +41,9 @@ $ npm install
 $ yarn
 ```
 
-#### run a server or response api or use ready service
+#### Run a server for api or use ready service
 
-#### Set base url service api for mode development in file .env.development in BASE_API_URL
+#### Set base url service api for mode development in file .env.development in key BASE_API_URL
 
 #### Start
 ```shell
