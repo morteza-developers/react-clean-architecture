@@ -1,0 +1,70 @@
+.main {
+  column-gap: 10px;
+  row-gap: 20px;
+  margin: 5px;
+  grid-template-columns: repeat(3, 92px);
+  grid-template-rows: auto;
+  display: grid;
+}
+
+.month {
+  position: relative;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  font-family: inherit;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  user-select: none;
+  color: gray;
+  border-radius: 10px;
+}
+
+.month:hover {
+  border-color: gray;
+}
+.month:active {
+  background-color: var(--data-picker-color-accent);
+  border-color: transparent;
+  color: gray;
+}
+.month[data-selected="true"] {
+  background-color: var(--data-picker-color-accent);
+  border-color: transparent;
+  color: #fff !important;
+}
+
+.month:not([data-range="true"]) {
+  transition: all 0.1s linear;
+  border-radius: 10px;
+}
+.month:not([data-selected="true"]) .main[data-weekend="true"] {
+  color: #ff4d4d;
+}
+.month:not([data-disabled="true"]) {
+  cursor: pointer;
+}
+.month[data-in-range="true"] {
+  background-color: var(--data-picker-color-accent);
+  border-color: transparent;
+}
+.month[data-start-range="true"] {
+  background-color: var(--data-picker-color-accent);
+  color: gray;
+  border-radius: 10px;
+  border-color: transparent;
+}
+.month[data-end-range="true"] {
+  background-color: var(--data-picker-color-accent);
+  color: gray;
+  border-radius: 10px;
+  border-color: transparent;
+}
+
+.month[data-in-range="true"]:nth-of-type(1):before,
+.month[data-start-range="true"]:before {
+  display: none;
+}

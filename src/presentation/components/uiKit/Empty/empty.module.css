@@ -1,0 +1,20 @@
+.notFound {
+  max-height: 220;
+  /* margin: 10px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFound > span {
+  max-width: 200px;
+  min-width: 80px;
+  max-height: 150px;
+}
+
+.action {
+  width: 100%;
+  margin-top: 20px;
+}

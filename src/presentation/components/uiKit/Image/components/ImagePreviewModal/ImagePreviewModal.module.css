@@ -1,0 +1,23 @@
+.modal {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.action_bar {
+    display: flex;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.modal_image {
+    user-select: none;
+    pointer-events: auto;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+    transition: all .4s ease;
+}

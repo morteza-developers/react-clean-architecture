@@ -1,0 +1,9 @@
+.main {
+  position: fixed;
+  z-index: 5500;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  bottom: 24px;
+  transition: 1s;
+}

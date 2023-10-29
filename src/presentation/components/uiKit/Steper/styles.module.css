@@ -1,0 +1,124 @@
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.stepper {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.step:not(:last-child) {
+  flex-grow: 1;
+}
+.step {
+  display: flex;
+  align-items: flex-start;
+}
+.text_sronly {
+  display: none;
+}
+
+.total_item {
+  display: none;
+  color: rgba(128, 128, 128, 0.74);
+}
+.counter {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  column-gap: 8px;
+  margin-bottom: 5px;
+}
+
+.step_label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.step:not(:last-child)::after {
+  margin-top: 15px;
+}
+
+.step:not(:last-child)::after {
+  content: "";
+  height: 2px;
+  flex-grow: 1;
+  min-width: 32px;
+  background-color: #ddd;
+  margin-left: 8px;
+}
+
+.current .indicator {
+  background-color: aqua;
+}
+.complete .indicator {
+  background-color: #008665 !important;
+}
+.indicator {
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.404);
+  text-align: center;
+  line-height: 1.5;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label_text {
+  color: rgba(0, 0, 0, 0.54);
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+@media (max-width: 680px) {
+  .step {
+    display: none;
+    width: 100%;
+  }
+  .current {
+    display: flex !important;
+  }
+
+  .step::after {
+    display: none;
+  }
+  .step_label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .label_text {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    color: #008665;
+    font-weight: 600;
+    line-height: 22px;
+    order: 50;
+  }
+  .text_sronly {
+    display: block;
+    color: gray;
+    font-weight: 500;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+  .total_item {
+    display: flex;
+  }
+}

@@ -1,0 +1,234 @@
+/* Font Faces */
+
+/* Iran Yekan Font Family */
+@font-face {
+  font-family: "YekanBakh";
+  src: url("./assets/fonts/YekanBakh/YekanBakh-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "YekanBakhFaNum";
+  src: url("./assets/fonts/YekanBakh/YekanBakhFaNum-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+}
+
+:root {
+  scrollbar-face-color: lightgrey;
+  /* background color (Firefox 63 only) */
+  scrollbar-track-color: white;
+  /* thumb/slider color (Firefox 63 only) */
+
+  /* background color [1. color] // thumb/slider color [2. color] (Firefox 64+) *********/
+  scrollbar-color: lightgrey white;
+
+  /* size/width *************************************************************************/
+  /*	scrollbar-width: auto; = default OS scrollbars
+		scrollbar-width: thin; = small scrollbars without buttons
+		scrollbar-width: none; = scrollbars are hidden
+		scrollbar-width: 17px; (not working yet, but might be supported in the future)  */
+  scrollbar-width: auto;
+}
+
+/* End Iran Yekan Font Family */
+html,
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  border-radius: 5px;
+}
+
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+.portal {
+  direction: rtl;
+}
+
+.portal tr {
+  display: flex;
+}
+
+.portal td {
+  flex: 1;
+}
+
+option {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Remove Autofill Highlight*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none !important;
+  -webkit-text-fill-color: inherit !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input {
+  filter: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="file"] {
+  width: 100%;
+  border: 1px grey solid;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.map-container {
+  height: 400px;
+  width: 100%;
+}
+
+.map-container1 {
+  height: 450px !important;
+  width: 100% !important;
+  border-radius: 10px;
+}
+
+.sidebar {
+  background-color: rgba(35, 55, 75, 0.9);
+  color: #fff;
+  padding: 6px 12px;
+  font-family: monospace;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  border-radius: 4px;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#marker {
+  display: block;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  z-index: 100;
+  text-align: center;
+}
+
+.coordinates {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  margin: 0;
+  font-size: 11px;
+  line-height: 18px;
+  border-radius: 3px;
+  display: none;
+}
+
+.makeStyles-dialogAction-281 {
+  padding: 16px;
+  display: none !important;
+  flex-direction: row-reverse;
+}
+
+element.style {
+  position: absolute;
+  width: 83%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  /* visibility: inherit; */
+}
+
+.error {
+  color: rgb(255, 49, 49);
+  font-size: 14px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.hide {
+  display: none !important;
+}
+
+.mapboxgl-popup {
+  max-width: 300px;
+}
+
+.mapboxgl-popup-content {
+  text-align: right;
+  font-size: 14px;
+  font-family: IRANYekanWeb;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.mapboxgl-popup-content > p {
+  margin: 0px 5px;
+}
+
+.loading {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  height: 6px !important;
+  z-index: 99;
+}
+.MuiList-root.MuiList-padding.makeStyles-list-15.muirtl-h4y409-MuiList-root::-webkit-scrollbar {
+  width: 0px;
+}
+.MuiList-root.MuiList-padding.makeStyles-list-15.muirtl-h4y409-MuiList-root:hover::-webkit-scrollbar {
+  width: 4px;
+}
+
+.tox-notification--warning {
+  display: none !important;
+}

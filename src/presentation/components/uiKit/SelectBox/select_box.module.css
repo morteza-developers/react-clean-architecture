@@ -1,0 +1,41 @@
+.title {
+  white-space: nowrap;
+  margin-right: 15px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  align-items: flex-end;
+  justify-content: center;
+}
+.error {
+  width: calc(100% - 30px);
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.33px;
+}
+
+.title_error {
+  margin-bottom: 15px;
+}
+.select_box > {
+  font-size: 16px;
+}
+.error_btn {
+  padding: 0px 15px;
+  margin: 0px !important;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.try_btn {
+  flex: 1;
+}
+.text_error {
+  flex: 2;
+}

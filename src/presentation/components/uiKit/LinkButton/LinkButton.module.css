@@ -1,0 +1,13 @@
+.link_style {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  white-space: nowrap;
+}
+
+.disable {
+  user-select: none;
+  opacity: 0.4;
+  cursor: not-allowed;
+}

@@ -1,0 +1,35 @@
+.minute_animation {
+  animation: fade 0.7s linear alternate
+}
+
+.numbers_item {
+
+  left: calc(50% - 16px);
+  top: 0;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  position: absolute;
+  align-items: center;
+  border-radius: 32px;
+  justify-content: center;
+  user-select: none;
+  pointer-events: none;
+  color: black;
+
+
+
+  /* transform: ${props =>
+ `translate(${numberPositionX(
+ props.idx,
+    props.clockHalfWidth,
+    props.numbersPadd)
+}
+
+px,
+${numberPositionY(props.idx, props.clockHalfWidth, props.numbersPadd)}px)`
+}
+
+; */
+
+}

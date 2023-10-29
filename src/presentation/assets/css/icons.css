@@ -1,0 +1,31 @@
+.icon {
+  margin: 0px 5px;
+  line-height: 0.75em;
+  vertical-align: -0.1967em;
+}
+
+.icon-drawer-logo::before {
+  content: url("../icons/drawerLogo.svg");
+}
+.icon-drawer-logo-name::before {
+  content: url("../icons/logoNameDrawer.svg");
+}
+
+.icon-profile-user::before {
+  content: url("../icons/profile-user.svg");
+}
+
+.icon-organization::before {
+  content: url("../icons/organization.svg");
+}
+
+.icon-money::before {
+  content: url("../icons/money.svg");
+}
+.icon-restore::before {
+  content: url("../icons/restore.svg");
+}
+
+.icon-empty::before {
+  content: url("../icons/empty.svg");
+}

@@ -1,0 +1,133 @@
+.clock {
+  width: 260px;
+  height: 260px;
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: hsl(226deg 32% 95%)
+}
+
+.hand {
+  left: 50%;
+  width: 1.5px;
+  bottom: 50%;
+  height: 40%;
+  position: absolute;
+  background-color: var(--data-picker-color-accent);
+  transform-origin: center bottom 0;
+  pointer-events: none;
+}
+
+.inside_hour {
+  height: '26%'
+
+}
+
+.hand_circle {
+  top: -22px;
+  right: -16px;
+  border: 16px solid var(--data-picker-color-accent);
+  position: absolute;
+  box-sizing: content-box;
+  border-radius: 100%;
+  background-color: var(--data-picker-color-accent);
+  pointer-events: none;
+}
+
+.time_wrapper {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 320px;
+  min-height: 320px;
+  border: 1px solid #DEDEDE;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 50px 16px 16px 16px;
+}
+
+
+
+.time {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: inherit;
+  color: gray;
+  direction: initial;
+}
+
+.clock_time_wrapper {
+  display: flex;
+  gap: 4px;
+}
+
+
+.clock_time {
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 4px;
+
+
+
+}
+
+.cl_selected {
+  background-color: "#8c8c8c";
+}
+
+.select_time {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+}
+
+.select_time>select {
+  font-weight: 600;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 5px;
+  padding: 2px 8px;
+
+}
+
+.back_time {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--data-picker-color-accent);
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 6px 8px;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.active_time {
+  color: #000;
+  font-size: 18px;
+}
+
+.actions {
+  width: 100%;
+  padding-top: 10px;
+}

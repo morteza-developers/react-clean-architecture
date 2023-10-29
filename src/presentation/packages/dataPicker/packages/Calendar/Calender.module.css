@@ -1,0 +1,51 @@
+.main {
+  overflow: hidden;
+  position: relative;
+  max-width: 320px;
+  min-width: 320px;
+  min-height: 372px;
+  border: 1px solid gray;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0px 10px;
+}
+
+.days {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: 5px;
+}
+
+.day_item {
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  gap: 4px;
+}
+
+.day {
+  display: flex;
+  gap: 4px;
+}
+
+.sub_header {
+  cursor: no-drop;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  height: 24px;
+  gap: 4px;
+}
+.day_name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  width: 40px;
+  color: #8c8c8c;
+}

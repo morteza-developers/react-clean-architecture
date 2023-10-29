@@ -1,0 +1,16 @@
+.root {
+  animation-name: identifier_ww;
+  animation-duration: 0.7s;
+  position: relative;
+}
+
+@keyframes identifier_ww {
+  0% {
+    opacity: 0;
+    top: 300px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}

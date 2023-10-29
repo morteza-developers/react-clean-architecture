@@ -1,0 +1,66 @@
+.main {
+  position: relative;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  font-family: inherit;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent;
+  user-select: none;
+  color: #2e2e2e;
+  border-radius: 50%;
+}
+
+.main > div {
+  color: inherit;
+}
+
+.main:hover {
+  border-color: #2e2e2e;
+}
+.main:active {
+  background-color: var(--data-picker-color-accent);
+  border-color: transparent;
+  color: gray;
+}
+.main[data-selected="true"] {
+  background-color: var(--data-picker-color-accent);
+  border-color: transparent;
+  color: #fff !important;
+}
+
+.main:disabled {
+  opacity: 0.6;
+}
+.main:not([data-range="true"]) {
+  transition: all 0.1s linear;
+}
+.main[data-weekend="true"] {
+  color: #ff4d4d !important;
+}
+.main:not([data-disabled="true"]) {
+  cursor: pointer;
+}
+.main[data-in-range="true"] {
+  background-color: #38383854;
+  border-color: transparent;
+  color: #fff;
+}
+.main[data-start-range="true"] {
+  background-color: var(--data-picker-color-accent);
+  color: #fff;
+  border-color: transparent;
+}
+.main[data-end-range="true"] {
+  background-color: var(--data-picker-color-accent);
+  color: #fff;
+  border-color: transparent;
+}
+
+.main[data-in-range="true"]:nth-of-type(1):before,
+.main[data-start-range="true"]:before {
+  display: none;
+}

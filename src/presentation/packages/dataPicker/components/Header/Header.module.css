@@ -1,0 +1,27 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding-right: 8px;
+  padding-left: 8px;
+  background-color: #fff;
+  border-bottom: 2px solid var(--data-picker-color-accent);
+}
+
+.header_title {
+  outline: none;
+  border: 0;
+  font-family: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--data-picker-color-accent);
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in;
+  border-radius: 10px;
+}
+.header_title:hover {
+  background-color: #2c2c2c1c;
+}
+

@@ -1,0 +1,21 @@
+.content {
+  margin-top: -10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.message {
+  font-size: 16px !important;
+  line-height: 1.8;
+}
+
+.action {
+  padding: 10px 10px 0px 10px;
+  display: flex;
+  column-gap: 10px;
+  width: 100%;
+}
+
+.action:empty {
+  padding: 0px;
+}

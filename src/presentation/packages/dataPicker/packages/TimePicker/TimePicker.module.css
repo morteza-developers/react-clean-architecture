@@ -1,0 +1,35 @@
+.actions {
+    display: flex;
+    column-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.actions>button,
+.main_actions>button {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: gray;
+}
+
+.main_actions {
+    display: flex;
+    column-gap: 10px;
+    justify-content: flex-start;
+}
+
+.place_holder>* {
+    direction: initial;
+    text-align: end !important;
+}
+
+.button {
+    color: var(--data-picker-color-accent) !important;
+
+}
