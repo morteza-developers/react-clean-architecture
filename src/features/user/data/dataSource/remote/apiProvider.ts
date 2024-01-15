@@ -3,17 +3,17 @@
 //  صدا زده شود و رو یدیتا نباید کاری انجام شود
 
 import { BaseResponse } from "core/resources/baseResponse";
-import { UserLoginParams } from "features/user/domain/params";
 import { IHttpClient } from "infrastructure/http";
 
 class UserApiProvider {
   constructor(private httpClient: IHttpClient, private baseUrl: string) {}
 
-  login = async (data: UserLoginParams) => {
+  login = async (data: object) => {
     return await this.httpClient.post<BaseResponse<any>>(
-      `${this.baseUrl}auth/login/pdf`,
+      `${this.baseUrl}auth/login`,
       {
         data: data,
+        headers: { "Version-App": "1" },
       }
     );
   };

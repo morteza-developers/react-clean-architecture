@@ -1,5 +1,5 @@
+import { GetAllBlogsParams } from "core/params/blog/blog";
 import { BlogEntity } from "features/blog/domain/entities/blogs";
-import { GetAllBlogsParams } from "features/blog/domain/params/blog";
 import { IStatus } from "presentation/types/public.types";
 
 export interface BlogsState {

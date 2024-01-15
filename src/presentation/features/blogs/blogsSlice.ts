@@ -8,16 +8,13 @@ import {
   deleteBlogsById,
   fetchRetryBlogs,
   reTryFetchBlogs,
-  fetchRecycleBlogsByPage,
-  reTryFetchRecycleBlogs,
-  fetchInitRecycleBlogs,
   restoreBlogsById,
   fetchBlogsByReset,
 } from "./actions";
 
 import { removeList } from "core/utils/tools";
-import { GetAllBlogsParams } from "features/blog/domain/params/blog";
 import { BlogEntity } from "features/blog/domain/entities/blogs";
+import { GetAllBlogsParams } from "core/params/blog/blog";
 
 const initialState: BlogsState = {
   list: {

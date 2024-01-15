@@ -3,13 +3,11 @@ import {
   resetBlogs,
   blogsUpdateFilter,
   blogsUpdatePage,
-  recycleBlogsUpdatePage,
-  initRecycleBlogsFilter,
 } from "./blogsSlice";
 
 import { createAppAsyncThunk } from "presentation/redux/utils";
-import { GetAllBlogsParams } from "features/blog/domain/params/blog";
 import { getAllBlogsUseCase } from "core/di/useCases";
+import { GetAllBlogsParams } from "core/params/blog/blog";
 
 export const fetchBlogs = createAppAsyncThunk(
   "blogs/fetchBlogs",
@@ -62,9 +60,7 @@ export const fetchBlogsByReset = createAppAsyncThunk(
   "blogs/fetchBlogsByReset",
   async (_, { dispatch }) => {
     dispatch(resetBlogs());
-    const response = await getAllBlogsUseCase(
-      new GetAllBlogsParams({ page: 1 })
-    );
+    const response = await getAllBlogsUseCase({ page: 1 });
     return response.data;
   }
 );
@@ -77,7 +73,7 @@ export const fetchBlogsByPage = createAppAsyncThunk(
         list: { filter },
       },
     } = getState();
-    const copyFilter = new GetAllBlogsParams({ ...filter, page });
+    const copyFilter = { ...filter, page };
     dispatch(blogsUpdatePage(page));
     const response = await getAllBlogsUseCase(copyFilter);
     return response.data;

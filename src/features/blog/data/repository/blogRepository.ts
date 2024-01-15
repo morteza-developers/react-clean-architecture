@@ -2,8 +2,8 @@ import { BaseBlogsRepository } from "features/blog/domain/repository/blogReposit
 import BlogApiProvider from "../dataSource/remote/blogApiProvider";
 import { DataState, DataSuccess } from "core/resources/dataState";
 import { BlogModel } from "../models/blog";
-import { GetAllBlogsParams } from "features/blog/domain/params/blog";
 import { IPipeLine } from "core/resources/pipeLine";
+import { GetAllBlogsParams } from "core/params/blog/blog";
 
 class BlogRepository extends BaseBlogsRepository {
   constructor(
@@ -18,7 +18,7 @@ class BlogRepository extends BaseBlogsRepository {
   ): Promise<DataState<BlogModel[]>> => {
     this.pipeLine.beforeRequest(params);
     return await this.apiProvider
-      .getAllBlog(params)
+      .getAllBlog(GetAllBlogsParams.toJson(params))
       .then((r) => {
         this.pipeLine.requestSuccess(params);
         return new DataSuccess<BlogModel[]>(

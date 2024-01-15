@@ -10,17 +10,5 @@ export class BlogEntity {
   public projectId: number;
   public userId: number;
   public createDate: Date;
-  constructor(data: BlogEntity) {
-    this.id = data.id;
-    this.service = data.service;
-    this.catsId = data.catsId;
-    this.tags = data.tags;
-    this.title = data.title;
-    this.context = data.context;
-    this.fileUrl = data.fileUrl;
-    this.image_url = data.image_url;
-    this.projectId = data.projectId;
-    this.userId = data.userId;
-    this.createDate = data.createDate;
-  }
+
 }

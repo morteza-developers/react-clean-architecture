@@ -13,7 +13,7 @@ import PasswordInput from "presentation/components/uiKit/PasswordInput";
 import { userLoginUseCase } from "core/di/useCases";
 import { toast } from "presentation/packages/notify";
 import { useFetch } from "presentation/packages/fetch";
-import { UserLoginParams } from "features/user/domain/params";
+import { UserLoginParams } from "core/params/user/user";
 const LoginPage = () => {
   const navigate = useNavigate();
   const classes = useStyles();

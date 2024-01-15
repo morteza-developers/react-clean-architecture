@@ -1,6 +1,6 @@
 import { DataState } from "core/resources/dataState";
 import { UserLoginEntity } from "../entities";
-import { UserLoginParams } from "../params";
+import { UserLoginParams } from "core/params/user/user";
 
 export abstract class BaseUserRepository {
   abstract login(

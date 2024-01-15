@@ -3,17 +3,17 @@
 //  صدا زده شود و رو یدیتا نباید کاری انجام شود
 
 import { BaseResponse } from "core/resources/baseResponse";
-import { GetAllBlogsParams } from "features/blog/domain/params/blog";
 import { IHttpClient } from "infrastructure/http";
 
 class BlogApiProvider {
   constructor(private httpClient: IHttpClient, private baseUrl: string) {}
 
-  getAllBlog = async (params: GetAllBlogsParams) => {
+  getAllBlog = async (params: object) => {
     return await this.httpClient.get<BaseResponse<any[]>>(
       `${this.baseUrl}blog/list/1`,
       {
         params: params,
+        headers: { "Version-App": "1" },
       }
     );
   };
