@@ -1,12 +1,8 @@
 import { BlogEntity } from "features/blog/domain/entities/blogs";
 
 export class BlogModel extends BlogEntity {
-  constructor(data: any) {
-    super(data);
-  }
-
-  static fromJson(json: any): BlogModel {
-    return new BlogModel({
+  static toEntity(json: any): BlogEntity {
+    return {
       id: json._id,
       catsId: json.catsId,
       tags: json.tags,
@@ -18,6 +14,6 @@ export class BlogModel extends BlogEntity {
       service: json.service,
       userId: json.userId,
       createDate: json.createDate,
-    });
+    };
   }
 }
